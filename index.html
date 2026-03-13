@@ -13,40 +13,106 @@
 
 <body>
 
-<h1>🍪 Sweet Stop Jessheim</h1>
+<header>
+
+<h1>🍪 Sweet Stop</h1>
+
+<nav>
+
+<button onclick="showPage('home')">Home</button>
+<button onclick="showPage('products')">Products</button>
+<button onclick="showPage('about')">About</button>
+<button onclick="showPage('contact')">Contact</button>
+<button onclick="showPage('basket')">Basket 🛒</button>
+
+</nav>
+
+</header>
+
+<section id="home">
+
+<h2>Welcome to Sweet Stop</h2>
+
+<p>The best cookies in Jessheim since 2025.</p>
+
+</section>
+
+<section id="products" style="display:none">
 
 <h2>Our Cookies</h2>
 
-<div class="products">
+<div id="productList"></div>
 
-<div class="card">
-<h3>Chocolate Chip</h3>
-<button onclick="addToCart('Chocolate Chip')">Add to Cart</button>
-</div>
+</section>
 
-<div class="card">
-<h3>Raspberry Cheesecake</h3>
-<button onclick="addToCart('Raspberry Cheesecake')">Add to Cart</button>
-</div>
+<section id="basket" style="display:none">
 
-<div class="card">
-<h3>Strawberry Shortcake</h3>
-<button onclick="addToCart('Strawberry Shortcake')">Add to Cart</button>
-</div>
-
-</div>
-
-<h2>Cart</h2>
+<h2>Your Basket</h2>
 
 <ul id="cart"></ul>
 
-<button onclick="sendOrder()">Send Order</button>
+<p>Subtotal: <span id="subtotal">0</span> NOK</p>
 
-<hr>
+<button onclick="checkout()">Checkout</button>
 
-<button onclick="adminLogin()">Admin</button>
+</section>
+
+<section id="checkout" style="display:none">
+
+<h2>Checkout</h2>
+
+<input id="name" placeholder="Your name">
+
+<input id="phone" placeholder="Phone number">
+
+<input id="address" placeholder="Address">
+
+<input id="city" placeholder="City">
+
+<select id="delivery">
+
+<option value="pickup">Pickup</option>
+
+<option value="jessheim">Delivery Jessheim</option>
+
+<option value="outside">Delivery Outside Jessheim (+100)</option>
+
+</select>
+
+<button onclick="placeOrder()">Place Order</button>
+
+</section>
+
+<section id="about" style="display:none">
+
+<h2>About Us</h2>
+
+<p>
+Sweet Stop is based in Jessheim and has been baking cookies since 2025.
+Our mission is simple: make the best cookies in town using high-quality ingredients and lots of love.
+</p>
+
+</section>
+
+<section id="contact" style="display:none">
+
+<h2>Contact</h2>
+
+<p>Call or SMS us at:</p>
+
+<h3>42156627</h3>
+
+</section>
+
+<section id="admin" style="display:none">
+
+<h2>Admin Orders</h2>
+
+<button onclick="adminLogin()">Login</button>
 
 <div id="orders"></div>
+
+</section>
 
 <script src="script.js"></script>
 
