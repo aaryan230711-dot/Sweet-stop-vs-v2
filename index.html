@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Sweet Stop Jessheim</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+</head>
+
+<body>
+
+<h1>🍪 Sweet Stop Jessheim</h1>
+
+<h2>Our Cookies</h2>
+
+<div class="products">
+
+<div class="card">
+<h3>Chocolate Chip</h3>
+<button onclick="addToCart('Chocolate Chip')">Add to Cart</button>
+</div>
+
+<div class="card">
+<h3>Raspberry Cheesecake</h3>
+<button onclick="addToCart('Raspberry Cheesecake')">Add to Cart</button>
+</div>
+
+<div class="card">
+<h3>Strawberry Shortcake</h3>
+<button onclick="addToCart('Strawberry Shortcake')">Add to Cart</button>
+</div>
+
+</div>
+
+<h2>Cart</h2>
+
+<ul id="cart"></ul>
+
+<button onclick="sendOrder()">Send Order</button>
+
+<hr>
+
+<button onclick="adminLogin()">Admin</button>
+
+<div id="orders"></div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
